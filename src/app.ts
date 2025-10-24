@@ -1,6 +1,11 @@
 import setSize from '@/utils/rem';
 import { RequestConfig } from '@umijs/max';
 
+import VConsole from 'vconsole';
+
+// 或者使用配置参数来初始化，详情见文档
+new VConsole({ theme: 'dark' });
+
 setSize(); // 初始化设置rem
 window.addEventListener('resize', () => {
   setSize();

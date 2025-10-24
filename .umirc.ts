@@ -22,10 +22,10 @@ export default defineConfig({
   },
   locale: {
     antd: true,
-    default: 'zh-CN',
+    default: 'en-US',
     baseSeparator: '-',
     useLocalStorage: true,
-    baseNavigator: true, // 让浏览器的语言设置生效
+    baseNavigator: true,
   },
   routes: [
     {
@@ -38,7 +38,10 @@ export default defineConfig({
       component: './Demo',
     },
   ],
-
+  // https: {
+  //   cert: './cert.pem',
+  //   key: './key.pem',
+  // },
   npmClient: 'pnpm',
   tailwindcss: {},
   extraPostCSSPlugins: [

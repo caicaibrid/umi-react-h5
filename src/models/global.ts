@@ -2,10 +2,10 @@
 import { useState } from 'react';
 
 const useUser = () => {
-  const [name, setName] = useState<string>("studio-activity-h5新框架");
+  const [loading, setLoading] = useState<boolean>(false);
   return {
-    name,
-    setName,
+    loading,
+    setLoading,
   };
 };
 
