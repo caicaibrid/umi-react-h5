@@ -1,4 +1,5 @@
 import { CheckNetworkStatus, Loading } from '@/components/checkNetworkStatus';
+import ConfirmModal from '@/components/confirmModal';
 import { Outlet } from '@umijs/max';
 
 export default function () {
@@ -6,6 +7,7 @@ export default function () {
     <>
       <CheckNetworkStatus />
       <Loading />
+      <ConfirmModal />
       <Outlet />
     </>
   );

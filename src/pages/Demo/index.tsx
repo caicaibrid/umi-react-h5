@@ -73,8 +73,10 @@ const HomePage: React.FC = () => {
         now - startTime,
       );
 
+      console.log('isAppOpened：', isAppOpened);
+
       // 移除事件监听（避免内存泄漏）
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      // document.removeEventListener('visibilitychange', handleVisibilityChange);
 
       // 若未打开App且未超时，则跳转网页版
       if (!isAppOpened && now - startTime < 1500) {
@@ -82,6 +84,7 @@ const HomePage: React.FC = () => {
         // window.open(twitterWebUrl, '_blank');
         // newWindow.location.href = twitterWebUrl; // 生效
         window.location.href = twitterWebUrl; // 部分浏览器阻止了对newWindow的操作，改为直接跳转当前页
+        console.log('跳转网页版');
       }
     }, 1000);
   };

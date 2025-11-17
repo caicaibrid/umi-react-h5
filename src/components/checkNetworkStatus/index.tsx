@@ -8,10 +8,10 @@ const CheckNetworkStatus = () => {
   const handleCheckNetworkStatus = () => {
     if (navigator.onLine) {
       console.log('在线');
-      setIsOnline(true);
+      setIsOnline(false);
     } else {
       console.log('离线');
-      setIsOnline(false);
+      setIsOnline(true);
     }
   };
   useEffect(() => {

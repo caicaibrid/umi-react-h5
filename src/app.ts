@@ -2,6 +2,7 @@ import setSize from '@/utils/rem';
 import { RequestConfig } from '@umijs/max';
 
 import VConsole from 'vconsole';
+import config from './utils/config';
 
 // 或者使用配置参数来初始化，详情见文档
 new VConsole({ theme: 'dark' });
@@ -11,25 +12,42 @@ window.addEventListener('resize', () => {
   setSize();
 });
 
-// 运行时配置
+let requestNum = 0;
+
+console.log(config);
 export const request: RequestConfig = {
-  timeout: 30000,
-  // 请求拦截器
+  // Base configuration
+  baseURL: config.API_URL,
+  timeout: 300000,
+  headers: {
+    'X-Requested-With': 'XMLHttpRequest',
+  },
+
+  // Request interceptors
   requestInterceptors: [
     (config: any) => {
-      // 拦截请求配置，进行个性化处理。
-      const url = config.url.concat('?token = 123');
-      return { ...config, url };
+      ++requestNum;
+      // Add authentication token
+      const token = localStorage.getItem('token');
+      config.headers = {
+        'Content-Type': 'application/json',
+        ...config.headers,
+        satoken: `${token}`,
+      };
+      return config;
     },
   ],
 
-  // 响应拦截器
+  // Response interceptors
   responseInterceptors: [
-    (response) => {
-      // 拦截响应数据，进行个性化处理
-      const { data } = response;
-      console.log('响应数据：', data);
-      return response;
+    (response: any) => {
+      --requestNum;
+      let data = response.data;
+      if (response.status !== 200 && requestNum === 0) {
+        // ('Request failed, please try again later');
+      }
+
+      return data;
     },
   ],
 };

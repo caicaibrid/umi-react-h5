@@ -15,6 +15,9 @@ export default defineConfig({
   codeSplitting: {
     jsStrategy: 'granularChunks',
   },
+  define: {
+    'process.env.UMI_ENV': process.env.UMI_ENV,
+  },
   ignoreMomentLocale: true,
   moment2dayjs: {
     preset: 'antd',
@@ -33,7 +36,11 @@ export default defineConfig({
       redirect: '/demo',
     },
     {
-      name: '首页',
+      path: '/overPage',
+      component: './overPage',
+    },
+    {
+      name: 'Demo',
       path: '/demo',
       component: './Demo',
     },

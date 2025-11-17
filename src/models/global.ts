@@ -1,7 +1,7 @@
 // 全局共享数据示例
 import { useState } from 'react';
 
-const useUser = () => {
+const useGlobal = () => {
   const [loading, setLoading] = useState<boolean>(false);
   return {
     loading,
@@ -9,4 +9,4 @@ const useUser = () => {
   };
 };
 
-export default useUser;
+export default useGlobal;

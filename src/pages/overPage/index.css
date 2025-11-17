@@ -1,0 +1,464 @@
+.btn:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+}
+
+.btn {
+  pointer-events: auto;
+}
+
+.mainBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  background: #49dede;
+}
+
+.mainSpan {
+  width: 10.8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  height: auto;
+}
+
+.ls_p {
+  position: absolute;
+}
+
+body {
+  overflow: hidden;
+  padding-top: env(safe-area-inset-top);
+}
+
+.bodyMain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.fixedCon {
+  width: 10.8rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.messCon,
+.pageCon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.fixedCon,
+.pageCon {
+  z-index: 30;
+}
+
+.messCon {
+  z-index: 40;
+}
+
+.pageCon > div {
+  display: none;
+}
+
+.messCon .show,
+.pageCon .show {
+  display: block;
+  pointer-events: visible;
+}
+
+.rule {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 80%);
+}
+
+.closeRuleBtn > img {
+  width: 0.63rem;
+  margin-top: 0.1rem;
+}
+
+.dialog-body {
+  height: 48%;
+  padding-top: 0;
+}
+
+.common1 {
+  margin-top: 1rem;
+  display: block;
+}
+
+*,
+:after,
+:before {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ff--trajanpro-bold {
+  font-family: TRAJANPRO-BOLD;
+}
+
+.dialog-close {
+  position: absolute;
+  top: -0.86rem;
+  right: -0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.dialog-body {
+  padding: 0.533333rem;
+  max-height: 60vh;
+  overflow: hidden auto;
+  border-radius: 0 0 0.24rem 0.24rem;
+}
+
+.ff--common {
+  font-family: SOURCEHANSANSCN-MEDIUM, -apple-system, Helvetica Neue, Arial,
+    PingFang SC, Hiragino Sans GB, Source Han Sans, Microsoft YaHei, sans-serif;
+}
+
+[data-level] {
+  margin-bottom: 0.388rem;
+  line-height: 0.471rem;
+}
+
+[data-level='1'] {
+  font-size: 0.288rem;
+  color: #fdd102;
+  font-weight: bold;
+}
+
+[data-level='2'] {
+  font-size: 0.273rem;
+  color: #ffffff;
+  padding-left: 0.05rem;
+  margin-top: -0.13rem;
+}
+
+.textCon {
+  width: 100%;
+  top: 27.95rem;
+  left: 0;
+  padding-left: 0.86rem;
+  height: auto;
+}
+
+.textCon > div {
+  overflow: hidden;
+  float: left;
+}
+
+.textCon > p {
+}
+
+#collapse {
+  bottom: -0.5rem;
+  left: 3.74rem;
+  height: 0.7rem;
+  position: relative;
+}
+
+#collapse > img {
+  width: 1.61rem;
+}
+
+.collapseImg2,
+.collapseImg1 {
+  display: none;
+}
+
+.cp2 .collapseImg2,
+.cp1 .collapseImg1 {
+  display: block;
+}
+
+.el-dialog {
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) !important;
+  transform: translateY(-50%) !important;
+}
+
+.rule > div {
+  display: none;
+}
+
+.rule > .show {
+  display: block;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  touch-action: pan-x pan-y;
+  /* 禁止双指缩放 */
+  -webkit-user-drag: none;
+  /* 禁止双指拖曳 */
+}
+
+* {
+  -webkit-touch-callout: none;
+}
+
+input[type='color'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='datetime'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+select,
+textarea {
+  -webkit-user-select: text;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+input,
+select,
+textarea {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 17px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+  color: #000;
+}
+
+.maxSize {
+  width: 100%;
+  height: 100%;
+}
+
+.topBox {
+  width: 100%;
+
+  height: 0;
+}
+
+.back2,
+.back {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  float: left;
+  position: absolute;
+  z-index: 31;
+}
+
+.back2 {
+  z-index: 1002;
+}
+
+.maxHeight {
+  height: 100%;
+}
+
+.videoLoadBox > .loadRos {
+  width: 1.5rem;
+  margin-top: 6.5rem;
+  position: absolute;
+  left: 4rem;
+}
+
+/* 禁止整个页面内容被复制 */
+body {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+  /* 标准语法 */
+}
+
+/* 定制滚动条的宽度和背景颜色 */
+::-webkit-scrollbar {
+  width: 0.04rem;
+  /* 定义滚动条的宽度 */
+  background-color: #f5f5f5;
+  /* 定义滚动条轨道的背景颜色 */
+}
+
+/* 定制滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  /* 定制滑块颜色 */
+  border-radius: 5px;
+  /* 定制滑块边角的圆滑程度 */
+}
+
+/* 定制滚动条轨道样式 */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+body,
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+.bg {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.img_1 {
+  left: 0.39rem;
+  top: 0.23rem;
+  width: 10.02rem;
+}
+
+.img_2 {
+  left: 0.39rem;
+  top: 11.93rem;
+  width: 10.02rem;
+}
+
+.img_3 {
+  left: 0.49rem;
+  top: 12.14rem;
+  width: 9.87rem;
+}
+
+.img_4 {
+  left: 1.71rem;
+  top: 13.43rem;
+  width: 7.39rem;
+}
+
+.img_5 {
+  left: 1.61rem;
+  top: 16.63rem;
+  width: 2.69rem;
+}
+
+.img_6 {
+  left: 6.51rem;
+  top: 16.63rem;
+  width: 2.69rem;
+}
+
+.img_7 {
+  left: 3.72rem;
+  top: 13.23rem;
+  width: 0.75rem;
+}
+
+.img_8 {
+  left: 0.39rem;
+  top: 18.36rem;
+  width: 10.02rem;
+}
+
+.img_9 {
+  left: 0.47rem;
+  top: 18.52rem;
+  width: 9.79rem;
+}
+
+.img_10 {
+  left: 1.1rem;
+  top: 19.7rem;
+  width: 8.6rem;
+}
+
+.img_11 {
+  left: 1.02rem;
+  top: 21.5rem;
+  width: 1.81rem;
+}
+
+.img_12 {
+  left: 3.34rem;
+  top: 21.5rem;
+  width: 1.81rem;
+}
+
+.img_13 {
+  left: 5.65rem;
+  top: 21.5rem;
+  width: 1.81rem;
+}
+
+.img_14 {
+  left: 7.96rem;
+  top: 21.5rem;
+  width: 1.81rem;
+}
+
+.img_15 {
+  left: 1.5rem;
+  top: 22.71rem;
+  width: 7.82rem;
+}
